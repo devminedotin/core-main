@@ -80,18 +80,18 @@ export default function IndexNavbar() {
       <Container>
         <div className="navbar-translate">
           <NavbarBrand to="/" tag={Link} id="navbar-brand">
-            {/* <img
+            <img
               alt="..."
-              // width="200"
-              // height="42"
+              width="42"
+              height="auto"
               className="main-logo-nav"
-              src={require("assets/img/DOC-20230716-WA0018.png")}
-            /> */}
-            <span>DevMine </span>
+              src={require("assets/img/main-logo.png")}
+            />
+            <span style={{ fontSize: 24, verticalAlign: "middle"}}> DevMine </span>
             {/* Design System React */}
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
-            Designed and Coded by Creative Tim
+            Designed and Coded by DevKings
           </UncontrolledTooltip>
           <button
             aria-expanded={collapseOpen}
