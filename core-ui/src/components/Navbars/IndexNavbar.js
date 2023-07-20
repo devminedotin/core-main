@@ -17,6 +17,7 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
+import { Image } from "react";
 // reactstrap components
 import {
   Button,
@@ -79,8 +80,15 @@ export default function IndexNavbar() {
       <Container>
         <div className="navbar-translate">
           <NavbarBrand to="/" tag={Link} id="navbar-brand">
-            <span>BLK• </span>
-            Design System React
+            {/* <img
+              alt="..."
+              // width="200"
+              // height="42"
+              className="main-logo-nav"
+              src={require("assets/img/DOC-20230716-WA0018.png")}
+            /> */}
+            <span>DevMine </span>
+            {/* Design System React */}
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
             Designed and Coded by Creative Tim
@@ -157,19 +165,71 @@ export default function IndexNavbar() {
                 <p className="d-lg-none d-xl-none">Instagram</p>
               </NavLink>
             </NavItem>
+            <NavItem className="p-0">
+              <NavLink
+                data-placement="bottom"
+                href="https://www.instagram.com/CreativeTimOfficial"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Follow us on Instagram"
+              >
+                <i className="fab fa-instagram" />
+                <p className="d-lg-none d-xl-none">Instagram</p>
+              </NavLink>
+            </NavItem>
             <UncontrolledDropdown nav>
               <DropdownToggle
-                caret
+                // caret
                 color="default"
-                data-toggle="dropdown"
-                href="#pablo"
+                // data-toggle="dropdown"
+                // href="#pablo"
                 nav
-                onClick={(e) => e.preventDefault()}
+                // onClick={(e) => e.preventDefault()}
               >
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Getting started
+                About Us
               </DropdownToggle>
-              <DropdownMenu className="dropdown-with-icons">
+              <DropdownToggle
+                tag={Link}
+                to="/register-page"
+                color="default"
+                nav
+              >
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Services
+              </DropdownToggle>
+              <DropdownToggle
+                tag={Link}
+                to="/register-page"
+                color="default"
+                nav
+              >
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Methodology
+              </DropdownToggle>
+              <DropdownToggle
+                tag={Link}
+                to="/register-page"
+                color="default"
+                nav
+              >
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Reviews/Testimonials
+              </DropdownToggle>
+              <DropdownToggle
+                tag={Link}
+                to="/register-page"
+                color="default"
+                nav
+              >
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Join Community
+              </DropdownToggle>
+              <DropdownToggle tag={Link} to="/profile-page" color="default" nav>
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Contact Us
+              </DropdownToggle>
+              {/* <DropdownMenu className="dropdown-with-icons">
                 <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/overview">
                   <i className="tim-icons icon-paper" />
                   Documentation
@@ -186,9 +246,9 @@ export default function IndexNavbar() {
                   <i className="tim-icons icon-single-02" />
                   Profile Page
                 </DropdownItem>
-              </DropdownMenu>
+              </DropdownMenu> */}
             </UncontrolledDropdown>
-            <NavItem>
+            {/* <NavItem>
               <Button
                 className="nav-link d-none d-lg-block"
                 color="primary"
@@ -206,7 +266,7 @@ export default function IndexNavbar() {
               >
                 <i className="tim-icons icon-cloud-download-93" /> Download
               </Button>
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Collapse>
       </Container>
