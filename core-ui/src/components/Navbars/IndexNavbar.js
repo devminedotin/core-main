@@ -84,7 +84,7 @@ export default function IndexNavbar() {
               alt="..."
               width="42"
               height="auto"
-              className="main-logo-nav"
+              // className="main-logo-nav"
               src={require("assets/img/main-logo.png")}
             />
             <span style={{ fontSize: 24, verticalAlign: "middle"}}> DevMine </span>
