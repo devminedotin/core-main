@@ -44,7 +44,10 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/IndexNavbar.js";
+
+import axios from "axios";
+import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+
 import Footer from "components/Footer/Footer.js";
 
 const carouselItems = [
@@ -69,6 +72,39 @@ let ps = null;
 
 export default function ProfilePage() {
   const [tabs, setTabs] = React.useState(1);
+  const [queryUserFullName,setQueryUserFullName] = React.useState("");
+  const [queryUserEmail, setQueryUserEmail] = React.useState("");
+  const [queryUserPhoneNumber, setQueryUserPhoneNumber] = React.useState("");
+  const [queryUserCompany,setQueryUserCompany] = React.useState("");
+  const [queryUserMessage, setQueryUserMessage] = React.useState("");
+
+  const sendUserQuery = async () =>{
+    console.log("sendUserQuery Handler initialted.");
+    await axios.post("http://localhost:3001/contact-us",{   "obj": {
+      "name": queryUserFullName,
+      "email": queryUserEmail,
+      "company": queryUserCompany,
+      "contact": queryUserPhoneNumber,
+      "query":queryUserMessage
+    }
+    })
+  .then((response) => {
+    console.log(response);
+   
+    if(response.status==200){
+      clearFormData();
+      alert("Success!")
+    }
+  });
+  }
+  const clearFormData=() =>{
+    setQueryUserFullName("")
+   setQueryUserEmail("");
+  setQueryUserPhoneNumber("");
+  setQueryUserCompany("");
+  setQueryUserMessage("");
+  }
+
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
       document.documentElement.className += " perfect-scrollbar-on";
@@ -183,13 +219,13 @@ export default function ProfilePage() {
                         <Col md="6">
                           <FormGroup>
                             <label>Your Name</label>
-                            <Input defaultValue="Mike" type="text" />
+                            <Input defaultValue="UserName"  type="text" placeholder="Full Name" placeholder="Name" onChange={(e)=>setQueryUserFullName(e.target.value)} />
                           </FormGroup>
                         </Col>
                         <Col md="6">
                           <FormGroup>
                             <label>Email address</label>
-                            <Input placeholder="mike@email.com" type="email" />
+                            <Input placeholder="example@email.com" type="email" placeholder="Email Details" onChange={(e)=>setQueryUserEmail(e.target.value)}/>
                           </FormGroup>
                         </Col>
                       </Row>
@@ -197,13 +233,13 @@ export default function ProfilePage() {
                         <Col md="6">
                           <FormGroup>
                             <label>Phone</label>
-                            <Input defaultValue="001-12321345" type="text" />
+                            <Input defaultValue="+91-7015743855"  type="text" placeholder="Contact Details" onChange={(e)=>setQueryUserPhoneNumber(e.target.value)}/>
                           </FormGroup>
                         </Col>
                         <Col md="6">
                           <FormGroup>
-                            <label>Company</label>
-                            <Input defaultValue="CreativeTim" type="text" />
+                            <label>Company/Student</label>
+                            <Input defaultValue="Company Name" type="text"  placeholder="Company Name" onChange={(e)=>setQueryUserCompany(e.target.value)} />
                           </FormGroup>
                         </Col>
                       </Row>
@@ -211,7 +247,7 @@ export default function ProfilePage() {
                         <Col md="12">
                           <FormGroup>
                             <label>Message</label>
-                            <Input placeholder="Hello there!" type="text" />
+                            <Input placeholder="Hello there!" type="text"  placeholder="Message" onChange={(e)=>setQueryUserMessage(e.target.value)}/>
                           </FormGroup>
                         </Col>
                       </Row>
@@ -221,8 +257,9 @@ export default function ProfilePage() {
                         data-placement="right"
                         id="tooltip341148792"
                         type="button"
+                        onClick={sendUserQuery}
                       >
-                        Send text
+                        Send Query.
                       </Button>
                       <UncontrolledTooltip
                         delay={0}
