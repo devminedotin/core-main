@@ -1,4 +1,3 @@
-
 import React from "react";
 import PerfectScrollbar from "perfect-scrollbar";
 
@@ -54,39 +53,41 @@ const carouselItems = [
 
 export default function ProfilePage() {
   const [tabs, setTabs] = React.useState(1);
-  const [queryUserFullName,setQueryUserFullName] = React.useState("");
+  const [queryUserFullName, setQueryUserFullName] = React.useState("");
   const [queryUserEmail, setQueryUserEmail] = React.useState("");
   const [queryUserPhoneNumber, setQueryUserPhoneNumber] = React.useState("");
-  const [queryUserCompany,setQueryUserCompany] = React.useState("");
+  const [queryUserCompany, setQueryUserCompany] = React.useState("");
   const [queryUserMessage, setQueryUserMessage] = React.useState("");
 
-  const sendUserQuery = async () =>{
+  const sendUserQuery = async () => {
     console.log("sendUserQuery Handler initialted.");
-    await axios.post("http://localhost:3001/contact-us",{   "obj": {
-      "name": queryUserFullName,
-      "email": queryUserEmail,
-      "company": queryUserCompany,
-      "contact": queryUserPhoneNumber,
-      "query":queryUserMessage
-    }
-    })
-  .then((response) => {
-    console.log(response);   
-    if(response.status==200){
-      clearFormData();
-      window.location.reload();
-    }else{
-      alert("Please check your input values!")
-    }
-  });
-  }
-  const clearFormData=() =>{
-    setQueryUserFullName("")
-   setQueryUserEmail("");
-  setQueryUserPhoneNumber("");
-  setQueryUserCompany("");
-  setQueryUserMessage("");
-  }
+    await axios
+      .post("http://localhost:3001/contact-us", {
+        obj: {
+          name: queryUserFullName,
+          email: queryUserEmail,
+          company: queryUserCompany,
+          contact: queryUserPhoneNumber,
+          query: queryUserMessage,
+        },
+      })
+      .then((response) => {
+        console.log(response);
+        if (response.status == 200) {
+          clearFormData();
+          window.location.reload();
+        } else {
+          alert("Please check your input values!");
+        }
+      });
+  };
+  const clearFormData = () => {
+    setQueryUserFullName("");
+    setQueryUserEmail("");
+    setQueryUserPhoneNumber("");
+    setQueryUserCompany("");
+    setQueryUserMessage("");
+  };
   //  React.useEffect(() => {
   //   if (navigator.platform.indexOf("Win") > -1) {
   //     document.documentElement.className += " perfect-scrollbar-on";
@@ -147,7 +148,9 @@ export default function ProfilePage() {
           <Container>
             <Row className="justify-content-between">
               <Col md="5">
-                <h1 className="profile-title text-left">Software Engineering</h1>
+                <h1 className="profile-title text-left">
+                  Software Engineering
+                </h1>
                 <h5 className="text-on-back">02</h5>
                 <p className="profile-description text-left">
                   An artist of considerable range, Ryan — the name taken by
@@ -159,9 +162,13 @@ export default function ProfilePage() {
               </Col>
               <Col md="6">
                 <Row className="justify-content-between align-items-center">
-                  <UncontrolledCarousel items={[{
-                    src: require("assets/img/web-development-isometric-concept-composition-illustration_1284-55922 (1).avif")
-                  }]} />
+                  <UncontrolledCarousel
+                    items={[
+                      {
+                        src: require("assets/img/web-development-isometric-concept-composition-illustration_1284-55922 (1).avif"),
+                      },
+                    ]}
+                  />
                 </Row>
               </Col>
             </Row>
@@ -222,13 +229,29 @@ export default function ProfilePage() {
                         <Col md="6">
                           <FormGroup>
                             <label>Your Name</label>
-                            <Input  type="text" required value= {queryUserFullName} placeholder="Full Name" onChange={(e)=>setQueryUserFullName(e.target.value)} />
+                            <Input
+                              type="text"
+                              required
+                              value={queryUserFullName}
+                              placeholder="Full Name"
+                              onChange={(e) =>
+                                setQueryUserFullName(e.target.value)
+                              }
+                            />
                           </FormGroup>
                         </Col>
                         <Col md="6">
                           <FormGroup>
                             <label>Email address</label>
-                            <Input type="email" value={queryUserEmail}  placeholder="Email Details" onChange={(e)=>setQueryUserEmail(e.target.value)} required/>
+                            <Input
+                              type="email"
+                              value={queryUserEmail}
+                              placeholder="Email Details"
+                              onChange={(e) =>
+                                setQueryUserEmail(e.target.value)
+                              }
+                              required
+                            />
                           </FormGroup>
                         </Col>
                       </Row>
@@ -236,13 +259,27 @@ export default function ProfilePage() {
                         <Col md="6">
                           <FormGroup>
                             <label>Phone</label>
-                            <Input   type="text" value={queryUserPhoneNumber}  placeholder="Contact Details" onChange={(e)=>setQueryUserPhoneNumber(e.target.value)}/>
+                            <Input
+                              type="text"
+                              value={queryUserPhoneNumber}
+                              placeholder="Contact Details"
+                              onChange={(e) =>
+                                setQueryUserPhoneNumber(e.target.value)
+                              }
+                            />
                           </FormGroup>
                         </Col>
                         <Col md="6">
                           <FormGroup>
                             <label>Company/Student</label>
-                            <Input  type="text" value={queryUserCompany}  placeholder="Company Name" onChange={(e)=>setQueryUserCompany(e.target.value)} />
+                            <Input
+                              type="text"
+                              value={queryUserCompany}
+                              placeholder="Company Name"
+                              onChange={(e) =>
+                                setQueryUserCompany(e.target.value)
+                              }
+                            />
                           </FormGroup>
                         </Col>
                       </Row>
@@ -250,7 +287,14 @@ export default function ProfilePage() {
                         <Col md="12">
                           <FormGroup>
                             <label>Message</label>
-                            <Input type="text" value={queryUserMessage}  placeholder="Message" onChange={(e)=>setQueryUserMessage(e.target.value)}/>
+                            <Input
+                              type="text"
+                              value={queryUserMessage}
+                              placeholder="Message"
+                              onChange={(e) =>
+                                setQueryUserMessage(e.target.value)
+                              }
+                            />
                           </FormGroup>
                         </Col>
                       </Row>

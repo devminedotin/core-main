@@ -56,14 +56,17 @@ export default function ExamplesNavbar() {
       <Container>
         <div className="navbar-translate">
           <NavbarBrand to="/" id="navbar-brand" tag={Link}>
-          <img
+            <img
               alt="..."
               width="42"
               height="auto"
               className="main-logo-nav"
               src={require("assets/img/main-logo.png")}
             />
-            <span style={{ fontSize: 24, verticalAlign: "middle"}}> DevMine </span>
+            <span style={{ fontSize: 24, verticalAlign: "middle" }}>
+              {" "}
+              DevMine{" "}
+            </span>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
             Designed and Coded by DevMine
@@ -141,25 +144,15 @@ export default function ExamplesNavbar() {
               </NavLink>
             </NavItem> */}
             <UncontrolledDropdown nav>
-              <DropdownToggle
-                tag={Link}
-                to="/"
-                color="default"
-                nav
-              >
+              <DropdownToggle tag={Link} to="/" color="default" nav>
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Home
               </DropdownToggle>
-              <DropdownToggle
-                tag={Link}
-                to="/landing-page"
-                color="default"
-                nav
-              >
+              <DropdownToggle tag={Link} to="/landing-page" color="default" nav>
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Services
               </DropdownToggle>
-                
+
               <DropdownToggle
                 tag={Link}
                 to="/register-page"
@@ -192,7 +185,7 @@ export default function ExamplesNavbar() {
                 </DropdownItem>
               </DropdownMenu> */}
             </UncontrolledDropdown>
-          
+
             {/* <NavItem>
               <NavLink tag={Link} to="/">
                 Back to Kit
