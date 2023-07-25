@@ -50,7 +50,7 @@ const carouselItems = [
   },
 ];
 
-let ps = null;
+// let ps = null;
 
 export default function ProfilePage() {
   const [tabs, setTabs] = React.useState(1);
@@ -87,47 +87,47 @@ export default function ProfilePage() {
   setQueryUserCompany("");
   setQueryUserMessage("");
   }
-   React.useEffect(() => {
-    if (navigator.platform.indexOf("Win") > -1) {
-      document.documentElement.className += " perfect-scrollbar-on";
-      document.documentElement.classList.remove("perfect-scrollbar-off");
-      let tables = document.querySelectorAll(".table-responsive");
-      for (let i = 0; i < tables.length; i++) {
-        ps = new PerfectScrollbar(tables[i]);
-      }
-    }
-    document.body.classList.toggle("profile-page");
-    // Specify how to clean up after this effect:
-    return function cleanup() {
-      if (navigator.platform.indexOf("Win") > -1) {
-        ps.destroy();
-        document.documentElement.className += " perfect-scrollbar-off";
-        document.documentElement.classList.remove("perfect-scrollbar-on");
-      }
-      document.body.classList.toggle("profile-page");
-    };
-  }, []);
+  //  React.useEffect(() => {
+  //   if (navigator.platform.indexOf("Win") > -1) {
+  //     document.documentElement.className += " perfect-scrollbar-on";
+  //     document.documentElement.classList.remove("perfect-scrollbar-off");
+  //     let tables = document.querySelectorAll(".table-responsive");
+  //     for (let i = 0; i < tables.length; i++) {
+  //       ps = new PerfectScrollbar(tables[i]);
+  //     }
+  //   }
+  //   document.body.classList.toggle("profile-page");
+  //   // Specify how to clean up after this effect:
+  //   return function cleanup() {
+  //     if (navigator.platform.indexOf("Win") > -1) {
+  //       ps.destroy();
+  //       document.documentElement.className += " perfect-scrollbar-off";
+  //       document.documentElement.classList.remove("perfect-scrollbar-on");
+  //     }
+  //     document.body.classList.toggle("profile-page");
+  //   };
+  // }, []);
 
-  React.useEffect(() => {
-    if (navigator.platform.indexOf("Win") > -1) {
-      document.documentElement.className += " perfect-scrollbar-on";
-      document.documentElement.classList.remove("perfect-scrollbar-off");
-      let tables = document.querySelectorAll(".table-responsive");
-      for (let i = 0; i < tables.length; i++) {
-        ps = new PerfectScrollbar(tables[i]);
-      }
-    }
-    document.body.classList.toggle("profile-page");
-    // Specify how to clean up after this effect:
-    return function cleanup() {
-      if (navigator.platform.indexOf("Win") > -1) {
-        ps.destroy();
-        document.documentElement.className += " perfect-scrollbar-off";
-        document.documentElement.classList.remove("perfect-scrollbar-on");
-      }
-      document.body.classList.toggle("profile-page");
-    };
-  }, []);
+  // React.useEffect(() => {
+  //   if (navigator.platform.indexOf("Win") > -1) {
+  //     document.documentElement.className += " perfect-scrollbar-on";
+  //     document.documentElement.classList.remove("perfect-scrollbar-off");
+  //     let tables = document.querySelectorAll(".table-responsive");
+  //     for (let i = 0; i < tables.length; i++) {
+  //       ps = new PerfectScrollbar(tables[i]);
+  //     }
+  //   }
+  //   document.body.classList.toggle("profile-page");
+  //   // Specify how to clean up after this effect:
+  //   return function cleanup() {
+  //     if (navigator.platform.indexOf("Win") > -1) {
+  //       ps.destroy();
+  //       document.documentElement.className += " perfect-scrollbar-off";
+  //       document.documentElement.classList.remove("perfect-scrollbar-on");
+  //     }
+  //     document.body.classList.toggle("profile-page");
+  //   };
+  // }, []);
   return (
     <>
       <ExamplesNavbar />

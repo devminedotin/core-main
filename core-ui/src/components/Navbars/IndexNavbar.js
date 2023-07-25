@@ -177,15 +177,6 @@ export default function IndexNavbar() {
                 nav
               >
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Reviews/Testimonials
-              </DropdownToggle>
-              <DropdownToggle
-                tag={Link}
-                to="/register-page"
-                color="default"
-                nav
-              >
-                <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Join Community
               </DropdownToggle>
               <DropdownToggle tag={Link} to="/profile-page" color="default" nav>
