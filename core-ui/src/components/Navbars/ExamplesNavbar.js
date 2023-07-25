@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System React - v1.2.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { Link } from "react-router-dom";
 import { InstagramLink } from "constants";
@@ -73,14 +56,17 @@ export default function ExamplesNavbar() {
       <Container>
         <div className="navbar-translate">
           <NavbarBrand to="/" id="navbar-brand" tag={Link}>
-          <img
+            <img
               alt="..."
               width="42"
               height="auto"
               className="main-logo-nav"
               src={require("assets/img/main-logo.png")}
             />
-            <span style={{ fontSize: 24, verticalAlign: "middle"}}> DevMine </span>
+            <span style={{ fontSize: 24, verticalAlign: "middle" }}>
+              {" "}
+              DevMine{" "}
+            </span>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
             Designed and Coded by DevMine
@@ -158,34 +144,15 @@ export default function ExamplesNavbar() {
               </NavLink>
             </NavItem> */}
             <UncontrolledDropdown nav>
-              <DropdownToggle
-                tag={Link}
-                to="/"
-                color="default"
-                nav
-              >
+              <DropdownToggle tag={Link} to="/" color="default" nav>
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Home
               </DropdownToggle>
-              <DropdownToggle
-                tag={Link}
-                to="/services"
-                color="default"
-                nav
-              >
+              <DropdownToggle tag={Link} to="/landing-page" color="default" nav>
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Services
               </DropdownToggle>
-              
-              <DropdownToggle
-                tag={Link}
-                to="/register-page"
-                color="default"
-                nav
-              >
-                <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Reviews/Testimonials
-              </DropdownToggle>
+
               <DropdownToggle
                 tag={Link}
                 to="/register-page"
@@ -218,7 +185,7 @@ export default function ExamplesNavbar() {
                 </DropdownItem>
               </DropdownMenu> */}
             </UncontrolledDropdown>
-          
+
             {/* <NavItem>
               <NavLink tag={Link} to="/">
                 Back to Kit
