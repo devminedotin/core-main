@@ -1,0 +1,1 @@
+export const InstagramLink = "https://www.instagram.com/devmine.in/";
