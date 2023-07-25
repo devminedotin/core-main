@@ -18,6 +18,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Image } from "react";
+import { InstagramLink } from "constants";
 // reactstrap components
 import {
   Button,
@@ -88,10 +89,10 @@ export default function IndexNavbar() {
               src={require("assets/img/main-logo.png")}
             />
             <span style={{ fontSize: 24, verticalAlign: "middle"}}> DevMine </span>
-            {/* Design System React */}
+  
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
-            Designed and Coded by DevKings
+            Designed and Coded by DevMine
           </UncontrolledTooltip>
           <button
             aria-expanded={collapseOpen}
@@ -129,7 +130,7 @@ export default function IndexNavbar() {
             </Row>
           </div>
           <Nav navbar>
-            <NavItem className="p-0">
+            {/* <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
                 href="https://twitter.com/CreativeTim"
@@ -152,11 +153,12 @@ export default function IndexNavbar() {
                 <i className="fab fa-facebook-square" />
                 <p className="d-lg-none d-xl-none">Facebook</p>
               </NavLink>
-            </NavItem>
+            </NavItem> */}
+{/*            
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial"
+                href={InstagramLink}
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Follow us on Instagram"
@@ -164,49 +166,27 @@ export default function IndexNavbar() {
                 <i className="fab fa-instagram" />
                 <p className="d-lg-none d-xl-none">Instagram</p>
               </NavLink>
-            </NavItem>
-            <NavItem className="p-0">
-              <NavLink
-                data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="Follow us on Instagram"
-              >
-                <i className="fab fa-instagram" />
-                <p className="d-lg-none d-xl-none">Instagram</p>
-              </NavLink>
-            </NavItem>
+            </NavItem> */}
             <UncontrolledDropdown nav>
               <DropdownToggle
-                // caret
+                tag={Link}
+                to="/"
                 color="default"
-                // data-toggle="dropdown"
-                // href="#pablo"
                 nav
-                // onClick={(e) => e.preventDefault()}
               >
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
-                About Us
+                Home
               </DropdownToggle>
               <DropdownToggle
                 tag={Link}
-                to="/register-page"
+                to="/services"
                 color="default"
                 nav
               >
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Services
               </DropdownToggle>
-              <DropdownToggle
-                tag={Link}
-                to="/register-page"
-                color="default"
-                nav
-              >
-                <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Methodology
-              </DropdownToggle>
+              
               <DropdownToggle
                 tag={Link}
                 to="/register-page"
@@ -248,25 +228,7 @@ export default function IndexNavbar() {
                 </DropdownItem>
               </DropdownMenu> */}
             </UncontrolledDropdown>
-            {/* <NavItem>
-              <Button
-                className="nav-link d-none d-lg-block"
-                color="primary"
-                target="_blank"
-                href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-user-archive-index-navbar-upgrade-pro"
-              >
-                <i className="tim-icons icon-spaceship" /> Upgrade to PRO
-              </Button>
-            </NavItem>
-            <NavItem>
-              <Button
-                className="nav-link d-none d-lg-block"
-                color="default"
-                onClick={scrollToDownload}
-              >
-                <i className="tim-icons icon-cloud-download-93" /> Download
-              </Button>
-            </NavItem> */}
+          
           </Nav>
         </Collapse>
       </Container>

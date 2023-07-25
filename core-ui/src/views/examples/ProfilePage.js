@@ -89,11 +89,12 @@ export default function ProfilePage() {
     }
     })
   .then((response) => {
-    console.log(response);
-   
+    console.log(response);   
     if(response.status==200){
       clearFormData();
-      alert("Success!")
+      window.location.reload();
+    }else{
+      alert("Please check your input values!")
     }
   });
   }
@@ -104,6 +105,26 @@ export default function ProfilePage() {
   setQueryUserCompany("");
   setQueryUserMessage("");
   }
+   React.useEffect(() => {
+    if (navigator.platform.indexOf("Win") > -1) {
+      document.documentElement.className += " perfect-scrollbar-on";
+      document.documentElement.classList.remove("perfect-scrollbar-off");
+      let tables = document.querySelectorAll(".table-responsive");
+      for (let i = 0; i < tables.length; i++) {
+        ps = new PerfectScrollbar(tables[i]);
+      }
+    }
+    document.body.classList.toggle("profile-page");
+    // Specify how to clean up after this effect:
+    return function cleanup() {
+      if (navigator.platform.indexOf("Win") > -1) {
+        ps.destroy();
+        document.documentElement.className += " perfect-scrollbar-off";
+        document.documentElement.classList.remove("perfect-scrollbar-on");
+      }
+      document.body.classList.toggle("profile-page");
+    };
+  }, []);
 
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -219,13 +240,13 @@ export default function ProfilePage() {
                         <Col md="6">
                           <FormGroup>
                             <label>Your Name</label>
-                            <Input defaultValue="UserName"  type="text" placeholder="Full Name" placeholder="Name" onChange={(e)=>setQueryUserFullName(e.target.value)} />
+                            <Input  type="text" required value= {queryUserFullName} placeholder="Full Name" onChange={(e)=>setQueryUserFullName(e.target.value)} />
                           </FormGroup>
                         </Col>
                         <Col md="6">
                           <FormGroup>
                             <label>Email address</label>
-                            <Input placeholder="example@email.com" type="email" placeholder="Email Details" onChange={(e)=>setQueryUserEmail(e.target.value)}/>
+                            <Input type="email" value={queryUserEmail}  placeholder="Email Details" onChange={(e)=>setQueryUserEmail(e.target.value)} required/>
                           </FormGroup>
                         </Col>
                       </Row>
@@ -233,13 +254,13 @@ export default function ProfilePage() {
                         <Col md="6">
                           <FormGroup>
                             <label>Phone</label>
-                            <Input defaultValue="+91-7015743855"  type="text" placeholder="Contact Details" onChange={(e)=>setQueryUserPhoneNumber(e.target.value)}/>
+                            <Input   type="text" value={queryUserPhoneNumber}  placeholder="Contact Details" onChange={(e)=>setQueryUserPhoneNumber(e.target.value)}/>
                           </FormGroup>
                         </Col>
                         <Col md="6">
                           <FormGroup>
                             <label>Company/Student</label>
-                            <Input defaultValue="Company Name" type="text"  placeholder="Company Name" onChange={(e)=>setQueryUserCompany(e.target.value)} />
+                            <Input  type="text" value={queryUserCompany}  placeholder="Company Name" onChange={(e)=>setQueryUserCompany(e.target.value)} />
                           </FormGroup>
                         </Col>
                       </Row>
@@ -247,7 +268,7 @@ export default function ProfilePage() {
                         <Col md="12">
                           <FormGroup>
                             <label>Message</label>
-                            <Input placeholder="Hello there!" type="text"  placeholder="Message" onChange={(e)=>setQueryUserMessage(e.target.value)}/>
+                            <Input type="text" value={queryUserMessage}  placeholder="Message" onChange={(e)=>setQueryUserMessage(e.target.value)}/>
                           </FormGroup>
                         </Col>
                       </Row>

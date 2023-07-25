@@ -26,6 +26,7 @@ import axios from "axios";
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
+import IndexNavbar from "components/Navbars/IndexNavbar";
 
 export default function RegisterPage() {  
   const [squares1to6, setSquares1to6] = React.useState("");
@@ -128,7 +129,8 @@ const  updateUserState= (e)=>{setUserState(e.target.userState);}
   };
   return (
     <>
-      <ExamplesNavbar />
+      {/* <ExamplesNavbar /> */}
+      <IndexNavbar />
       <div className="wrapper">
         <div className="page-header">
           <div className="page-header-image" />

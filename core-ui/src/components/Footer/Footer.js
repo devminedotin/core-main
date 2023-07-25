@@ -69,11 +69,6 @@ export default function Footer() {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://creative-tim.com/about-us?ref=blkdsr-footer">
-                  About Us
-                </NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="https://creative-tim.com/blog?ref=blkdsr-footer">
                   Blog
                 </NavLink>

@@ -17,10 +17,13 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
+import { InstagramLink } from "constants";
 // reactstrap components
 import {
   Button,
   Collapse,
+  DropdownToggle,
+  UncontrolledDropdown,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -70,11 +73,17 @@ export default function ExamplesNavbar() {
       <Container>
         <div className="navbar-translate">
           <NavbarBrand to="/" id="navbar-brand" tag={Link}>
-            <span>BLK• </span>
-            Design System React
+          <img
+              alt="..."
+              width="42"
+              height="auto"
+              className="main-logo-nav"
+              src={require("assets/img/main-logo.png")}
+            />
+            <span style={{ fontSize: 24, verticalAlign: "middle"}}> DevMine </span>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
-            Designed and Coded by Creative Tim
+            Designed and Coded by DevMine
           </UncontrolledTooltip>
           <button
             aria-expanded={collapseOpen}
@@ -112,7 +121,7 @@ export default function ExamplesNavbar() {
             </Row>
           </div>
           <Nav navbar>
-            <NavItem className="p-0">
+            {/* <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
                 href="https://twitter.com/CreativeTim"
@@ -123,8 +132,8 @@ export default function ExamplesNavbar() {
                 <i className="fab fa-twitter" />
                 <p className="d-lg-none d-xl-none">Twitter</p>
               </NavLink>
-            </NavItem>
-            <NavItem className="p-0">
+            </NavItem> */}
+            {/* <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
                 href="https://www.facebook.com/CreativeTim"
@@ -135,11 +144,11 @@ export default function ExamplesNavbar() {
                 <i className="fab fa-facebook-square" />
                 <p className="d-lg-none d-xl-none">Facebook</p>
               </NavLink>
-            </NavItem>
-            <NavItem className="p-0">
+            </NavItem> */}
+            {/* <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial"
+                href={InstagramLink}
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Follow us on Instagram"
@@ -147,27 +156,79 @@ export default function ExamplesNavbar() {
                 <i className="fab fa-instagram" />
                 <p className="d-lg-none d-xl-none">Instagram</p>
               </NavLink>
-            </NavItem>
-            <NavItem>
-              <Button
-                className="nav-link d-none d-lg-block"
-                color="primary"
-                target="_blank"
-                href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-examples-navbar-upgrade-pro"
+            </NavItem> */}
+            <UncontrolledDropdown nav>
+              <DropdownToggle
+                tag={Link}
+                to="/"
+                color="default"
+                nav
               >
-                <i className="tim-icons icon-spaceship" /> Upgrade to PRO
-              </Button>
-            </NavItem>
-            <NavItem>
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Home
+              </DropdownToggle>
+              <DropdownToggle
+                tag={Link}
+                to="/services"
+                color="default"
+                nav
+              >
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Services
+              </DropdownToggle>
+              
+              <DropdownToggle
+                tag={Link}
+                to="/register-page"
+                color="default"
+                nav
+              >
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Reviews/Testimonials
+              </DropdownToggle>
+              <DropdownToggle
+                tag={Link}
+                to="/register-page"
+                color="default"
+                nav
+              >
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Join Community
+              </DropdownToggle>
+              <DropdownToggle tag={Link} to="/profile-page" color="default" nav>
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Contact Us
+              </DropdownToggle>
+              {/* <DropdownMenu className="dropdown-with-icons">
+                <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/overview">
+                  <i className="tim-icons icon-paper" />
+                  Documentation
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/register-page">
+                  <i className="tim-icons icon-bullet-list-67" />
+                  Register Page
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/landing-page">
+                  <i className="tim-icons icon-image-02" />
+                  Landing Page
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/profile-page">
+                  <i className="tim-icons icon-single-02" />
+                  Profile Page
+                </DropdownItem>
+              </DropdownMenu> */}
+            </UncontrolledDropdown>
+          
+            {/* <NavItem>
               <NavLink tag={Link} to="/">
                 Back to Kit
               </NavLink>
-            </NavItem>
-            <NavItem>
+            </NavItem> */}
+            {/* <NavItem>
               <NavLink href="https://github.com/creativetimofficial/blk-design-system-react/issues">
                 Have an issue?
               </NavLink>
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Collapse>
       </Container>
