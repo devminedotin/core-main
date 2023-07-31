@@ -28,7 +28,7 @@ import {
 
 import axios from "axios";
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-
+import classNames from "classnames";
 import Footer from "components/Footer/Footer.js";
 
 const carouselItems = [
