@@ -1,24 +1,5 @@
-/*!
-
-=========================================================
-* BLK Design System React - v1.2.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-// react plugin used to create charts
 import { Line } from "react-chartjs-2";
-// reactstrap components
 import {
   Button,
   Card,
@@ -33,7 +14,6 @@ import {
   Col,
 } from "reactstrap";
 
-// core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
 
@@ -86,56 +66,15 @@ export default function LandingPage() {
             <Row className="row-grid justify-content-between align-items-center text-left">
               <Col lg="6" md="6">
                 <h1 className="text-white">
-                  We keep your coin <br />
-                  <span className="text-white">secured</span>
+                  We keep your code <br />
+                  <span className="text-white">secured!</span>
                 </h1>
                 <p className="text-white mb-3">
-                  A wonderful serenity has taken possession of my entire soul,
-                  like these sweet mornings of spring which I enjoy with my
-                  whole heart. I am alone, and feel...
+                  Our software technology company employs cutting-edge
+                  encryption and robust security measures to safeguard your
+                  valuable code and intellectual property, ensuring peace of
+                  mind and confidentiality for all our clients...
                 </p>
-                <div className="btn-wrapper mb-3">
-                  <p className="category text-success d-inline">
-                    From 9.99%/mo
-                  </p>
-                  <Button
-                    className="btn-link"
-                    color="success"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                    size="sm"
-                  >
-                    <i className="tim-icons icon-minimal-right" />
-                  </Button>
-                </div>
-                <div className="btn-wrapper">
-                  <div className="button-container">
-                    <Button
-                      className="btn-icon btn-simple btn-round btn-neutral"
-                      color="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-icon btn-simple btn-round btn-neutral"
-                      color="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-dribbble" />
-                    </Button>
-                    <Button
-                      className="btn-icon btn-simple btn-round btn-neutral"
-                      color="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-facebook" />
-                    </Button>
-                  </div>
-                </div>
               </Col>
               <Col lg="4" md="5">
                 <img
@@ -171,7 +110,7 @@ export default function LandingPage() {
                               <div className="numbers">
                                 <CardTitle tag="p">3,237</CardTitle>
                                 <p />
-                                <p className="card-category">Awards</p>
+                                <p className="card-category">Clients</p>
                               </div>
                             </Col>
                           </Row>
@@ -189,7 +128,7 @@ export default function LandingPage() {
                             </Col>
                             <Col md="8" xs="7">
                               <div className="numbers">
-                                <CardTitle tag="p">3,653</CardTitle>
+                                <CardTitle tag="p">33,653</CardTitle>
                                 <p />
                                 <p className="card-category">Commits</p>
                               </div>
@@ -213,7 +152,7 @@ export default function LandingPage() {
                               <div className="numbers">
                                 <CardTitle tag="p">593</CardTitle>
                                 <p />
-                                <p className="card-category">Presents</p>
+                                <p className="card-category">Projects</p>
                               </div>
                             </Col>
                           </Row>
@@ -249,25 +188,15 @@ export default function LandingPage() {
                       Achivements
                     </h1>
                     <p>
-                      I should be capable of drawing a single stroke at the
-                      present moment; and yet I feel that I never was a greater
-                      artist than now.
+                      Devmine, a trailblazing software technology startup, has
+                      achieved remarkable success since its inception. Through
+                      relentless innovation and dedication, the company has
+                      revolutionized the software development landscape,
+                      delivering cutting-edge solutions that cater to diverse
+                      industries. Embracing a customer-centric approach, Devmine
+                      has garnered widespread acclaim for its user-friendly
+                      products, enhancing efficiency and productivity.
                     </p>
-                    <br />
-                    <p>
-                      When, while the lovely valley teems with vapour around me,
-                      and the meridian sun strikes the upper surface of the
-                      impenetrable foliage of my trees, and but a few stray.
-                    </p>
-                    <br />
-                    <a
-                      className="font-weight-bold text-info mt-5"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Show all{" "}
-                      <i className="tim-icons icon-minimal-right text-info" />
-                    </a>
                   </div>
                 </Col>
               </Row>
@@ -295,45 +224,52 @@ export default function LandingPage() {
               <Col lg="12">
                 <h1 className="text-center">Your best benefit</h1>
                 <Row className="row-grid justify-content-center">
-                  <Col lg="3">
+                  <Col lg="4">
                     <div className="info">
                       <div className="icon icon-primary">
                         <i className="tim-icons icon-money-coins" />
                       </div>
-                      <h4 className="info-title">Low Commission</h4>
+                      <h4 className="info-title">Adequate Pricing</h4>
                       <hr className="line-primary" />
                       <p>
-                        Divide details about your work into parts. Write a few
-                        lines about each one. A paragraph describing a feature
-                        will.
+                        Embracing affordable pricing as a core leadership
+                        principle, "Devmine," our software tech startup, aims to
+                        democratize innovation by offering affordable solutions
+                        without compromising quality, fostering widespread
+                        accessibility and empowering businesses worldwide.
                       </p>
                     </div>
                   </Col>
-                  <Col lg="3">
+                  <Col lg="4">
                     <div className="info">
                       <div className="icon icon-warning">
                         <i className="tim-icons icon-chart-pie-36" />
                       </div>
-                      <h4 className="info-title">High Incomes</h4>
+                      <h4 className="info-title">Delivering Values</h4>
                       <hr className="line-warning" />
                       <p>
-                        Divide details about your product or agency work into
-                        parts. Write a few lines about each one. A paragraph
-                        describing feature will be a feature.
+                        At DevMine, we prioritize delivering value through
+                        innovative solutions, exceptional products, and
+                        customer-centricity. Our leadership principle drives us
+                        to constantly exceed expectations, optimize outcomes,
+                        and empower success in the ever-evolving software
+                        technology landscape.
                       </p>
                     </div>
                   </Col>
-                  <Col lg="3">
+                  <Col lg="4">
                     <div className="info">
                       <div className="icon icon-success">
                         <i className="tim-icons icon-single-02" />
                       </div>
-                      <h4 className="info-title">Verified People</h4>
+                      <h4 className="info-title">Maestros Developers</h4>
                       <hr className="line-success" />
                       <p>
-                        Divide details about your product or agency work into
-                        parts. Write a few lines about each one. A paragraph
-                        describing be enough.
+                        Experienced maestros of development, we, at Devmine,
+                        boast a seasoned team of skilled professionals
+                        well-versed in cutting-edge technologies, committed to
+                        crafting top-tier software solutions that cater to our
+                        clients' diverse needs with finesse and expertise.
                       </p>
                     </div>
                   </Col>
@@ -370,7 +306,7 @@ export default function LandingPage() {
                   <CardBody>
                     <div className="justify-content-center">
                       <div className="numbers">
-                        <CardTitle tag="p">573 K</CardTitle>
+                        <CardTitle tag="p">1,186</CardTitle>
                         <p className="card-category text-white">
                           Satisfied customers
                         </p>
@@ -382,7 +318,7 @@ export default function LandingPage() {
                   <CardBody>
                     <div className="justify-content-center">
                       <div className="numbers">
-                        <CardTitle tag="p">10 425</CardTitle>
+                        <CardTitle tag="p">593</CardTitle>
                         <p className="card-category text-white">Business</p>
                       </div>
                     </div>
@@ -394,9 +330,10 @@ export default function LandingPage() {
                   <hr className="line-success" />
                   <h3>Awesome features</h3>
                   <p>
-                    The design system comes with three pre-built pages to help
-                    you get started faster. You can change the text and images
-                    and you're good to go.
+                    Devmine offers cutting-edge software solutions with seamless
+                    integration, robust security, and scalability, empowering
+                    clients to streamline workflows, enhance productivity, and
+                    achieve their business objectives efficiently.
                   </p>
                   <ul className="list-unstyled mt-5">
                     <li className="py-2">
@@ -405,7 +342,7 @@ export default function LandingPage() {
                           <i className="tim-icons icon-vector" />
                         </div>
                         <div className="ml-3">
-                          <h6>Carefully crafted components</h6>
+                          <h6>Carefully crafted softwares</h6>
                         </div>
                       </div>
                     </li>
@@ -415,7 +352,7 @@ export default function LandingPage() {
                           <i className="tim-icons icon-tap-02" />
                         </div>
                         <div className="ml-3">
-                          <h6>Amazing page examples</h6>
+                          <h6>Creative solution s</h6>
                         </div>
                       </div>
                     </li>
@@ -425,7 +362,7 @@ export default function LandingPage() {
                           <i className="tim-icons icon-single-02" />
                         </div>
                         <div className="ml-3">
-                          <h6>Super friendly support team</h6>
+                          <h6>24 x 7 support</h6>
                         </div>
                       </div>
                     </li>
@@ -476,10 +413,10 @@ export default function LandingPage() {
           />
           <Container>
             <Row>
-              <Col md="4">
+              <Col md="12">
                 <hr className="line-info" />
                 <h1>
-                  Choose the coin{" "}
+                  Choose a service{" "}
                   <span className="text-info">that fits your needs</span>
                 </h1>
               </Col>
@@ -497,23 +434,19 @@ export default function LandingPage() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Light Coin</h4>
-                        <span>Plan</span>
+                        <h4 className="text-uppercase">Web Development</h4>
                         <hr className="line-primary" />
                       </Col>
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem>50 messages</ListGroupItem>
-                        <ListGroupItem>100 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
+                        <ListGroupItem>Frontend Development</ListGroupItem>
+                        <ListGroupItem>Backend Development</ListGroupItem>
+                        <ListGroupItem>Full-Stack Development</ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="primary">
-                      Get plan
-                    </Button>
                   </CardFooter>
                 </Card>
               </Col>
@@ -529,23 +462,19 @@ export default function LandingPage() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Dark Coin</h4>
-                        <span>Plan</span>
+                        <h4 className="text-uppercase">Mobile App Development</h4>
                         <hr className="line-success" />
                       </Col>
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem>150 messages</ListGroupItem>
-                        <ListGroupItem>1000 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
+                        <ListGroupItem>iOS App Development</ListGroupItem>
+                        <ListGroupItem>Android App Development</ListGroupItem>
+                        <ListGroupItem>Cross-Platform App Development</ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="success">
-                      Get plan
-                    </Button>
                   </CardFooter>
                 </Card>
               </Col>
@@ -561,23 +490,109 @@ export default function LandingPage() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Bright Coin</h4>
-                        <span>Plan</span>
+                        <h4 className="text-uppercase">Cloud Solutions</h4>
                         <hr className="line-info" />
                       </Col>
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem>350 messages</ListGroupItem>
-                        <ListGroupItem>10K emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
+                        <ListGroupItem>Infrastructure as a Service (IaaS)</ListGroupItem>
+                        <ListGroupItem>Platform as a Service (PaaS)</ListGroupItem>
+                        <ListGroupItem>Software as a Service (SaaS)</ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="info">
-                      Get plan
-                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+            </Row>
+            <br />
+            <br />
+            <br />
+            <br />
+            <Row>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/bitcoin.png")}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">AI and Machine Learning</h4>
+                        <hr className="line-primary" />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem>Natural Language Processing (NLP)</ListGroupItem>
+                        <ListGroupItem>Computer Vision</ListGroupItem>
+                        <ListGroupItem>Predictive Analytics</ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/etherum.png")}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Cybersecurity Services</h4>
+                        <hr className="line-success" />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem>Network Security</ListGroupItem>
+                        <ListGroupItem>Data Encryption</ListGroupItem>
+                        <ListGroupItem>Vulnerability Assessment</ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">                    
+                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src={require("assets/img/ripp.png")}
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Career Services</h4>
+                        <hr className="line-info" />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <ListGroup>
+                        <ListGroupItem>Resume Reviews</ListGroupItem>
+                        <ListGroupItem>Roadmap for Placements</ListGroupItem>
+                        <ListGroupItem>Mock Interviews</ListGroupItem>
+                      </ListGroup>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
                   </CardFooter>
                 </Card>
               </Col>

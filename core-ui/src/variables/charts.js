@@ -28,18 +28,22 @@ const bigChart = {
 
     return {
       labels: [
-        "JUN",
-        "FEB",
-        "MAR",
-        "APR",
-        "MAY",
-        "JUN",
-        "JUL",
-        "AUG",
-        "SEP",
-        "OCT",
-        "NOV",
-        "DEC",
+        "SEP'22",
+        "OCT'22",
+        "NOV'22",
+        "DEC'22",
+        "JAN'23",
+        "FEB'23",
+        "MAR'23",
+        "APR'23",
+        "MAY'23",
+        "JUN'23",
+        "JUL'23",
+        "AUG'23",
+        "SEP'23",
+        "OCT'23",
+        "NOV'23",
+        "DEC'23",
       ],
       datasets: [
         {
@@ -58,7 +62,7 @@ const bigChart = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [80, 160, 200, 160, 250, 280, 220, 190, 200, 250, 290, 320],
+          data: [1, 2, 4, 8, 16, 32, 7, 127, 13, 92, 64, 247],
         },
       ],
     };
