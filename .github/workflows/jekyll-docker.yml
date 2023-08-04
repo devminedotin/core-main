@@ -41,9 +41,9 @@ jobs:
         node-version: 14
 
     - name: Install Dependencies
-      working-directory: ./core-server
+      working-directory: ./core-server #Error: Cannot find module '/home/runner/work/core-main/core-main/core-ui/app.js'
       run: npm install
 
     - name: Build Core Server
-      working-directory: ./core-ui
+      working-directory: ./core-server
       run: node app.js
