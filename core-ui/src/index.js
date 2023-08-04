@@ -19,7 +19,8 @@ root.render(
       <Route path="/" element={<Index />} />
       <Route path="/landing-page" element={<LandingPage />} />
       <Route path="/register-page" element={<RegisterPage />} />
-      <Route path="/profile-page" element={<ProfilePage />} />
+      <Route path="/profile-page/contact-us" element={<ProfilePage scrollToDivComponent="contact-us" />} />
+      <Route path="/profile-page/reviews" element={<ProfilePage scrollToDivComponent="reviews" />} />
       <Route path="/help" element={<Index />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

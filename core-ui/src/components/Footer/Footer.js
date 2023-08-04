@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -29,17 +28,7 @@ export default function Footer() {
               </NavItem>
               <NavItem>
                 <NavLink to="/landing-page" tag={Link}>
-                  Landing
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/register-page" tag={Link}>
-                  Register
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/profile-page" tag={Link}>
-                  Profile
+                  Services
                 </NavLink>
               </NavItem>
             </Nav>
@@ -47,18 +36,13 @@ export default function Footer() {
           <Col md="3">
             <Nav>
               <NavItem>
-                <NavLink href="https://creative-tim.com/contact-us?ref=blkdsr-footer">
+                <NavLink to="/profile-page" tag={Link}>
                   Contact Us
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://creative-tim.com/blog?ref=blkdsr-footer">
-                  Blog
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://opensource.org/licenses/MIT">
-                  License
+                <NavLink to="/register-page" tag={Link}>
+                  Register
                 </NavLink>
               </NavItem>
             </Nav>

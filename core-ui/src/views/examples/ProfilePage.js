@@ -51,7 +51,7 @@ const carouselItems = [
 
 // let ps = null;
 
-export default function ProfilePage() {
+export default function ProfilePage({scrollToDivComponent}) {
   const [tabs, setTabs] = React.useState(1);
   const [queryUserFullName, setQueryUserFullName] = React.useState("");
   const [queryUserEmail, setQueryUserEmail] = React.useState("");
@@ -88,6 +88,13 @@ export default function ProfilePage() {
     setQueryUserCompany("");
     setQueryUserMessage("");
   };
+  React.useEffect(() => {
+    if (scrollToDivComponent === "reviews") {
+      document.querySelector(".reviews-section").scrollIntoView({ behavior: "smooth" });
+    } else {
+      document.querySelector(".contact-section").scrollIntoView({ behavior: "smooth" });
+    }
+  }, [scrollToDivComponent]);
   //  React.useEffect(() => {
   //   if (navigator.platform.indexOf("Win") > -1) {
   //     document.documentElement.className += " perfect-scrollbar-on";
@@ -183,7 +190,7 @@ export default function ProfilePage() {
                 </Row>
               </Col>
               <Col md="5">
-                <h1 className="profile-title text-left">Projects</h1>
+                <h1 className=" profile-title text-left reviews-section">Projects</h1>
                 <h5 className="text-on-back">02</h5>
                 <p className="profile-description text-left">
                   An artist of considerable range, Ryan — the name taken by
@@ -218,7 +225,7 @@ export default function ProfilePage() {
           <Container>
             <Row>
               <Col md="6">
-                <Card className="card-plain">
+                <Card className="card-plain contact-section">
                   <CardHeader>
                     <h1 className="profile-title text-left">Contact</h1>
                     <h5 className="text-on-back">03</h5>

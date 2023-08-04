@@ -162,7 +162,11 @@ export default function ExamplesNavbar() {
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Join Community
               </DropdownToggle>
-              <DropdownToggle tag={Link} to="/profile-page" color="default" nav>
+              <DropdownToggle tag={Link} to="/profile-page/reviews" color="default" nav>
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Reviews/Testimonials
+              </DropdownToggle>
+              <DropdownToggle tag={Link} to="/profile-page/contact-us" color="default" nav>
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Contact Us
               </DropdownToggle>
