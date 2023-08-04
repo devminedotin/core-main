@@ -41,13 +41,17 @@ jobs:
       with:
         node-version: 14
 
-    - name: Install Dependencies
+    # - name: Install Dependencies
+    #   working-directory: ./core-ui
+    #   run: npm install
+    - name: Working Dir
       working-directory: ./core-ui
-      run: npm install
+      run: pwd
 
-    - name: Build Core UI
-      working-directory: ./core-ui
-      run: npm run build --if-present
+    # - name: Build Core UI
+    #   working-directory: ./core-ui
+    #   run: npm run build --if-present
+      
       
 
   # deploy-core-server:
