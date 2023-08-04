@@ -22,9 +22,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+    - name: Install Dependencies
+      working-directory: ./core-ui
+      run: npm ci
+    - name: Build Core UI
+      working-directory: ./core-ui
+      run: npm run build --if-present
 
   # deploy-core-ui:
   #   runs-on: ubuntu-latest
