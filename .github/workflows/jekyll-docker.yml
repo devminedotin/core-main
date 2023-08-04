@@ -41,7 +41,7 @@ jobs:
         node-version: 14
 
     - name: Install Dependencies
-      working-directory: ./core-ui
+      working-directory: ./core-server
       run: npm install
 
     - name: Build Core Server
