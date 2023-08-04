@@ -51,6 +51,11 @@ jobs:
       run: npm run build --if-present
       
       
+    - name: Deploy UI
+      working-directory: ./core-ui
+      run: |
+          npm install -g serve
+          serve -s build
 
   # deploy-core-server:
   #   runs-on: ubuntu-latest
