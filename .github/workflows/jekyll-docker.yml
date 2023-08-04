@@ -7,43 +7,62 @@ on:
     branches: [ "master" ]
 
 jobs:
-  deploy-core-ui:
+
+  build:
+
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
-        node-version: 14
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
 
-    - name: Install Dependencies
-      working-directory: ./core-ui
-      run: npm install
+  # deploy-core-ui:
+  #   runs-on: ubuntu-latest
 
-    - name: Build Core UI
-      working-directory: ./core-ui
-      run: npm run start
+  #   steps:
+  #   - name: Checkout Repository
+  #     uses: actions/checkout@v2
+
+  #   - name: Setup Node.js
+  #     uses: actions/setup-node@v2
+  #     with:
+  #       node-version: 14
+
+  #   - name: Install Dependencies
+  #     working-directory: ./core-ui
+  #     run: npm install
+
+  #   - name: Build Core UI
+  #     working-directory: ./core-ui
+  #     run: npm run start
       
 
-  deploy-core-server:
-    runs-on: ubuntu-latest
+  # deploy-core-server:
+  #   runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+  #   steps:
+  #   - name: Checkout Repository
+  #     uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14
+  #   - name: Setup Node.js
+  #     uses: actions/setup-node@v2
+  #     with:
+  #       node-version: 14
 
-    - name: Install Dependencies
-      working-directory: ./core-server #Error: Cannot find module '/home/runner/work/core-main/core-main/core-ui/app.js'
-      run: npm install
+  #   - name: Install Dependencies
+  #     working-directory: ./core-server #Error: Cannot find module '/home/runner/work/core-main/core-main/core-ui/app.js'
+  #     run: npm install
 
-    - name: Build Core Server
-      working-directory: ./core-server
-      run: node app.js
+  #   - name: Build Core Server
+  #     working-directory: ./core-server
+  #     run: node app.js
