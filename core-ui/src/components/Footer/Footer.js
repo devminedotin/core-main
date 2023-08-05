@@ -36,7 +36,7 @@ export default function Footer() {
           <Col md="3">
             <Nav>
               <NavItem>
-                <NavLink to="/profile-page" tag={Link}>
+                <NavLink to="/profile-page/contact-us" tag={Link}>
                   Contact Us
                 </NavLink>
               </NavItem>
@@ -53,23 +53,11 @@ export default function Footer() {
               <Button
                 className="btn-icon btn-neutral btn-round btn-simple"
                 color="default"
-                href="https://twitter.com/creativetim"
-                id="tooltip622135962"
-                target="_blank"
-              >
-                <i className="fab fa-twitter" />
-              </Button>
-              <UncontrolledTooltip delay={0} target="tooltip622135962">
-                Follow us
-              </UncontrolledTooltip>
-              <Button
-                className="btn-icon btn-neutral btn-round btn-simple"
-                color="default"
-                href="https://www.facebook.com/creativetim"
+                href="https://www.instagram.com/devmine.in/"
                 id="tooltip230450801"
                 target="_blank"
               >
-                <i className="fab fa-facebook-square" />
+                <i className="fab fa-instagram" />
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip230450801">
                 Like us
@@ -81,7 +69,7 @@ export default function Footer() {
                 id="tooltip318450378"
                 target="_blank"
               >
-                <i className="fab fa-dribbble" />
+                <i className="fab fa-linkedin" />
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip318450378">
                 Follow us

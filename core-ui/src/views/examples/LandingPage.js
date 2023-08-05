@@ -20,23 +20,6 @@ import bigChartData from "variables/charts.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 
 export default function LandingPage() {
-  const carouselItems = [
-    {
-      src: require("assets/img/denys.jpg"),
-      altText: "Slide 1",
-      caption: "Big City Life, United States",
-    },
-    {
-      src: require("assets/img/fabien-bazanegue.jpg"),
-      altText: "Slide 2",
-      caption: "Somewhere Beyond, United States",
-    },
-    {
-      src: require("assets/img/mark-finn.jpg"),
-      altText: "Slide 3",
-      caption: "Stocks, United States",
-    },
-  ];
   React.useEffect(() => {
     document.body.classList.toggle("landing-page");
     // Specify how to clean up after this effect:
@@ -455,7 +438,13 @@ export default function LandingPage() {
             <Row className="justify-content-between">
               <Col md="6">
                 <Row className="justify-content-between align-items-center">
-                  <UncontrolledCarousel items={carouselItems} />
+                  <UncontrolledCarousel
+                    items={[
+                      {
+                        src: require("assets/img/p1.jpg"),
+                      },
+                    ]}
+                  />
                 </Row>
               </Col>
               <Col md="5">

@@ -145,7 +145,7 @@ export default function ProfilePage({ scrollToDivComponent }) {
           <Container>
             <Row className="justify-content-between">
               <Col md="6">
-                <Row className="custom-carousel justify-content-between align-items-center">
+                <Row className="custom-carousel-1 justify-content-between align-items-center">
                   <UncontrolledCarousel items={carouselItems} />
                 </Row>
               </Col>
@@ -153,30 +153,8 @@ export default function ProfilePage({ scrollToDivComponent }) {
                 <h1 className="profile-title text-left">Testimonials</h1>
                 <h5 className="text-on-back">01</h5>
                 <p className="profile-description text-left">
-                  An artist of considerable range, Ryan — the name taken by
-                  Melbourne-raised, Brooklyn-based Nick Murphy — writes,
-                  performs and records all of his own music, giving it a warm,
-                  intimate feel with a solid groove structure. An artist of
-                  considerable range.
+                  Feedback from our happy customers.
                 </p>
-                <div className="btn-wrapper pt-3">
-                  <Button
-                    className="btn-simple"
-                    color="primary"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <i className="tim-icons icon-book-bookmark" /> Bookmark
-                  </Button>
-                  <Button
-                    className="btn-simple"
-                    color="info"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <i className="tim-icons icon-bulb-63" /> Check it!
-                  </Button>
-                </div>
               </Col>
             </Row>
           </Container>

@@ -6,9 +6,15 @@
   font-size: 1.0625rem;
 }
 
-.carousel-item > img {
+.custom-carousel-1 .carousel-item > img {
   object-fit: scale-down;
   opacity: 0.2;
+}
+
+.card-register .card-header .card-title {
+  font-size: 4em;
+  text-transform: initial;
+  margin-left: 15px;
 }
 
 .d-none {
