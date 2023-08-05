@@ -1,0 +1,5 @@
+.custom-carousel .carousel-caption {
+    background-color: black; /* Set the background color to black */
+    opacity: 0.8; /* Optional: To make the caption semi-transparent */
+    color: white; /* Optional: To set the text color to white */
+  }

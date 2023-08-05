@@ -1,4 +1,5 @@
 import React from "react";
+import '../../assets/css/custom.css';
 
 import {
   Button,
@@ -25,7 +26,8 @@ const carouselItems = [
   {
     src: require("assets/img/denys.jpg"),
     altText: "Slide 1",
-    caption: "Big City Life, United States",
+    caption:
+      "Devmine's software is a game-changer! Their intuitive interface made it easy for our team to adapt, and the results were outstanding. We're impressed with their innovative approach and dedicated customer support.",
   },
   {
     src: require("assets/img/fabien-bazanegue.jpg"),
@@ -88,53 +90,11 @@ export default function ProfilePage({ scrollToDivComponent }) {
         .scrollIntoView({ behavior: "smooth" });
     }
   }, [scrollToDivComponent]);
-  //  React.useEffect(() => {
-  //   if (navigator.platform.indexOf("Win") > -1) {
-  //     document.documentElement.className += " perfect-scrollbar-on";
-  //     document.documentElement.classList.remove("perfect-scrollbar-off");
-  //     let tables = document.querySelectorAll(".table-responsive");
-  //     for (let i = 0; i < tables.length; i++) {
-  //       ps = new PerfectScrollbar(tables[i]);
-  //     }
-  //   }
-  //   document.body.classList.toggle("profile-page");
-  //   // Specify how to clean up after this effect:
-  //   return function cleanup() {
-  //     if (navigator.platform.indexOf("Win") > -1) {
-  //       ps.destroy();
-  //       document.documentElement.className += " perfect-scrollbar-off";
-  //       document.documentElement.classList.remove("perfect-scrollbar-on");
-  //     }
-  //     document.body.classList.toggle("profile-page");
-  //   };
-  // }, []);
 
-  // React.useEffect(() => {
-  //   if (navigator.platform.indexOf("Win") > -1) {
-  //     document.documentElement.className += " perfect-scrollbar-on";
-  //     document.documentElement.classList.remove("perfect-scrollbar-off");
-  //     let tables = document.querySelectorAll(".table-responsive");
-  //     for (let i = 0; i < tables.length; i++) {
-  //       ps = new PerfectScrollbar(tables[i]);
-  //     }
-  //   }
-  //   document.body.classList.toggle("profile-page");
-  //   // Specify how to clean up after this effect:
-  //   return function cleanup() {
-  //     if (navigator.platform.indexOf("Win") > -1) {
-  //       ps.destroy();
-  //       document.documentElement.className += " perfect-scrollbar-off";
-  //       document.documentElement.classList.remove("perfect-scrollbar-on");
-  //     }
-  //     document.body.classList.toggle("profile-page");
-  //   };
-  // }, []);
   return (
     <>
       <IndexNavbar />
       <div className="wrapper">
-        
-
         <div className="section reviews-section">
           <br />
           <br />
@@ -143,12 +103,12 @@ export default function ProfilePage({ scrollToDivComponent }) {
           <Container>
             <Row className="justify-content-between">
               <Col md="6">
-                <Row className="justify-content-between align-items-center">
+                <Row className="custom-carousel justify-content-between align-items-center">
                   <UncontrolledCarousel items={carouselItems} />
                 </Row>
               </Col>
               <Col md="5">
-                <h1 className=" profile-title text-left">Testimonials</h1>
+                <h1 className="profile-title text-left">Testimonials</h1>
                 <h5 className="text-on-back">01</h5>
                 <p className="profile-description text-left">
                   An artist of considerable range, Ryan — the name taken by
