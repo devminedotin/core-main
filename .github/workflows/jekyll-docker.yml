@@ -48,7 +48,7 @@ jobs:
 
     - name: Install Dependencies
       working-directory: ./core-ui
-      run: npm ci
+      run: npm install
   
 
     - name: Build Core UI
