@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/css/custom.css';
+import "../../assets/css/custom.css";
 
 import {
   Button,
@@ -27,21 +27,63 @@ const carouselItems = [
     src: require("assets/img/denys.jpg"),
     altText: "Slide 1",
     caption:
-      "Devmine's software is a game-changer! Their intuitive interface made it easy for our team to adapt, and the results were outstanding. We're impressed with their innovative approach and dedicated customer support.",
+      "Devmine's software is a game-changer! We're impressed with their innovative approach and dedicated customer support.",
   },
   {
     src: require("assets/img/fabien-bazanegue.jpg"),
     altText: "Slide 2",
-    caption: "Somewhere Beyond, United States",
+    caption:
+      "Kudos to Devmine for their exceptional services! Their software solutions are top-notch.",
   },
   {
     src: require("assets/img/mark-finn.jpg"),
     altText: "Slide 3",
-    caption: "Stocks, United States",
+    caption:
+      "Five stars for Devmine! Their pricing is competitive, making them a cost-effective choice for startups like ours.",
+  },
+  {
+    src: require("assets/img/denys.jpg"),
+    altText: "Slide 4",
+    caption:
+      "Outstanding experience with Devmine! The software's quality and user-friendly design showcased their expertise in the tech industry.",
+  },
+  {
+    src: require("assets/img/fabien-bazanegue.jpg"),
+    altText: "Slide 5",
+    caption:
+      "Devmine's innovative software solutions gave us a competitive edge. Highly recommend their services!",
+  },
+  {
+    src: require("assets/img/mark-finn.jpg"),
+    altText: "Slide 6",
+    caption:
+      "Devmine made our project a breeze! We're impressed with their knowledge and professionalism.",
+  },
+  {
+    src: require("assets/img/denys.jpg"),
+    altText: "Slide 7",
+    caption:
+      "Devmine's team is exceptional! Their software services transformed our operations and helped us achieve our goals.",
+  },
+  {
+    src: require("assets/img/fabien-bazanegue.jpg"),
+    altText: "Slide 8",
+    caption:
+      "Efficient and reliable services from Devmine! A remarkable tech startup with a bright future!",
+  },
+  {
+    src: require("assets/img/mark-finn.jpg"),
+    altText: "Slide 9",
+    caption:
+      "Devmine stands out for their seamless user experience and top-tier software.",
+  },
+  {
+    src: require("assets/img/mark-finn.jpg"),
+    altText: "Slide 9",
+    caption:
+      "Thrilled with Devmine's results! Their innovative solutions saved us time and money.",
   },
 ];
-
-// let ps = null;
 
 export default function ProfilePage({ scrollToDivComponent }) {
   const [queryUserFullName, setQueryUserFullName] = React.useState("");
