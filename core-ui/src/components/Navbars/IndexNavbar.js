@@ -1,19 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Image } from "react";
-import { InstagramLink } from "constants";
 // reactstrap components
 import {
-  Button,
   Collapse,
   DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   UncontrolledDropdown,
   NavbarBrand,
   Navbar,
-  NavItem,
-  NavLink,
   Nav,
   Container,
   Row,
@@ -26,6 +19,7 @@ export default function IndexNavbar() {
   const [collapseOut, setCollapseOut] = React.useState("");
   const [color, setColor] = React.useState("navbar-transparent");
   React.useEffect(() => {
+    window.scrollTo(0, 0);
     window.addEventListener("scroll", changeColor);
     return function cleanup() {
       window.removeEventListener("scroll", changeColor);
@@ -54,11 +48,6 @@ export default function IndexNavbar() {
   const onCollapseExited = () => {
     setCollapseOut("");
   };
-  const scrollToDownload = () => {
-    document
-      .getElementById("download-section")
-      .scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
       <Container>
@@ -71,8 +60,10 @@ export default function IndexNavbar() {
               // className="main-logo-nav"
               src={require("assets/img/main-logo.png")}
             />
-            <span style={{ fontSize: 24, verticalAlign: "middle"}}> DevMine </span>
-  
+            <span style={{ fontSize: 24, verticalAlign: "middle" }}>
+              {" "}
+              DevMine{" "}
+            </span>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
             Designed and Coded by DevMine
@@ -137,7 +128,7 @@ export default function IndexNavbar() {
                 <p className="d-lg-none d-xl-none">Facebook</p>
               </NavLink>
             </NavItem> */}
-{/*            
+            {/*            
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
@@ -151,25 +142,15 @@ export default function IndexNavbar() {
               </NavLink>
             </NavItem> */}
             <UncontrolledDropdown nav>
-              <DropdownToggle
-                tag={Link}
-                to="/"
-                color="default"
-                nav
-              >
+              <DropdownToggle tag={Link} to="/" color="default" nav>
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Home
               </DropdownToggle>
-              <DropdownToggle
-                tag={Link}
-                to="/landing-page"
-                color="default"
-                nav
-              >
+              <DropdownToggle tag={Link} to="/landing-page" color="default" nav>
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Services
               </DropdownToggle>
-              
+
               <DropdownToggle
                 tag={Link}
                 to="/register-page"
@@ -179,11 +160,21 @@ export default function IndexNavbar() {
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Join Community
               </DropdownToggle>
-              <DropdownToggle tag={Link} to="/profile-page/reviews" color="default" nav>
+              <DropdownToggle
+                tag={Link}
+                to="/profile-page/reviews"
+                color="default"
+                nav
+              >
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Reviews/Testimonials
               </DropdownToggle>
-              <DropdownToggle tag={Link} to="/profile-page/contact-us" color="default" nav>
+              <DropdownToggle
+                tag={Link}
+                to="/profile-page/contact-us"
+                color="default"
+                nav
+              >
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
                 Contact Us
               </DropdownToggle>
@@ -206,7 +197,6 @@ export default function IndexNavbar() {
                 </DropdownItem>
               </DropdownMenu> */}
             </UncontrolledDropdown>
-          
           </Nav>
         </Collapse>
       </Container>

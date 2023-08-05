@@ -1,7 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 import {
-  Button,
   Card,
   CardHeader,
   CardBody,
@@ -12,14 +11,32 @@ import {
   Container,
   Row,
   Col,
+  UncontrolledCarousel,
 } from "reactstrap";
 
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
 
 import bigChartData from "variables/charts.js";
+import IndexNavbar from "components/Navbars/IndexNavbar";
 
 export default function LandingPage() {
+  const carouselItems = [
+    {
+      src: require("assets/img/denys.jpg"),
+      altText: "Slide 1",
+      caption: "Big City Life, United States",
+    },
+    {
+      src: require("assets/img/fabien-bazanegue.jpg"),
+      altText: "Slide 2",
+      caption: "Somewhere Beyond, United States",
+    },
+    {
+      src: require("assets/img/mark-finn.jpg"),
+      altText: "Slide 3",
+      caption: "Stocks, United States",
+    },
+  ];
   React.useEffect(() => {
     document.body.classList.toggle("landing-page");
     // Specify how to clean up after this effect:
@@ -29,7 +46,7 @@ export default function LandingPage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar />
       <div className="wrapper">
         <div className="page-header">
           <img
@@ -372,6 +389,96 @@ export default function LandingPage() {
             </Row>
           </Container>
         </section>
+        <div className="section">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <img
+            alt="..."
+            className="dots"
+            src={require("assets/img/dots.png")}
+          />
+          <img
+            alt="..."
+            className="path"
+            src={require("assets/img/path4.png")}
+          />
+          {/* <Container className="align-items-center"> */}
+          <Container>
+            <Row className="justify-content-between">
+              <Col md="5">
+                <h1 className="profile-title text-left">
+                  Software Engineering
+                </h1>
+                <p className="profile-description text-left">
+                  We are an innovative Software Engineering company, where we
+                  build and provide cutting-edge solutions to our valued
+                  clients. At DevMine, we pride ourselves on delivering
+                  top-notch software engineering services that cater to a
+                  diverse range of industries and businesses. Our team of highly
+                  skilled and experienced engineers is committed to creating
+                  efficient, robust, and scalable software solutions that meet
+                  the unique requirements of each client.
+                  <h4> </h4>
+                  <h4>✔ Agile Development</h4>
+                  <h4>✔ Version Control</h4>
+                  <h4>✔ CI/CD</h4>
+                  <h4>✔ Test-Driven Development (TDD)</h4>
+                  <h4>✔ Design Patterns</h4>
+                  <h4>✔ Security Measures</h4>
+                </p>
+              </Col>
+              <Col md="6">
+                <Row className="justify-content-between align-items-center">
+                  <UncontrolledCarousel
+                    items={[
+                      {
+                        src: require("assets/img/web-development-isometric-concept-composition-illustration_1284-55922 (1).avif"),
+                      },
+                    ]}
+                  />
+                </Row>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <div className="section">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <Container>
+            <Row className="justify-content-between">
+              <Col md="6">
+                <Row className="justify-content-between align-items-center">
+                  <UncontrolledCarousel items={carouselItems} />
+                </Row>
+              </Col>
+              <Col md="5">
+                <h1 className="profile-title text-left">Projects</h1>
+                <p className="profile-description text-left">
+                  Our dedicated team of technology experts thrives on
+                  challenges, and we relish the opportunity to work on projects
+                  that make a significant impact in the digital landscape. Here
+                  are some of the technology projects we excel in:
+                  <h4> </h4>
+                  <h4>✔ Web Solutions</h4>
+                  <h4>✔ Mobile Solutions</h4>
+                  <h4>✔ AI/ML Solutions</h4>
+                  <h4>✔ Cloud-native Applications</h4>
+                  <h4>✔ Big Data Solutions</h4>
+                  <h4>✔ Cybersecurity Solutions</h4>
+                  <h4>✔ Blockchain Development</h4>
+                  <h4>✔ IoT Solutions</h4>
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </div>
         <section className="section section-lg">
           <img
             alt="..."
@@ -446,8 +553,7 @@ export default function LandingPage() {
                       </ListGroup>
                     </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
-                  </CardFooter>
+                  <CardFooter className="text-center"></CardFooter>
                 </Card>
               </Col>
               <Col md="4">
@@ -462,7 +568,9 @@ export default function LandingPage() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Mobile App Development</h4>
+                        <h4 className="text-uppercase">
+                          Mobile App Development
+                        </h4>
                         <hr className="line-success" />
                       </Col>
                     </Row>
@@ -470,12 +578,13 @@ export default function LandingPage() {
                       <ListGroup>
                         <ListGroupItem>iOS App Development</ListGroupItem>
                         <ListGroupItem>Android App Development</ListGroupItem>
-                        <ListGroupItem>Cross-Platform App Development</ListGroupItem>
+                        <ListGroupItem>
+                          Cross-Platform App Development
+                        </ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
-                  </CardFooter>
+                  <CardFooter className="text-center"></CardFooter>
                 </Card>
               </Col>
               <Col md="4">
@@ -496,14 +605,19 @@ export default function LandingPage() {
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem>Infrastructure as a Service (IaaS)</ListGroupItem>
-                        <ListGroupItem>Platform as a Service (PaaS)</ListGroupItem>
-                        <ListGroupItem>Software as a Service (SaaS)</ListGroupItem>
+                        <ListGroupItem>
+                          Infrastructure as a Service (IaaS)
+                        </ListGroupItem>
+                        <ListGroupItem>
+                          Platform as a Service (PaaS)
+                        </ListGroupItem>
+                        <ListGroupItem>
+                          Software as a Service (SaaS)
+                        </ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
-                  </CardFooter>
+                  <CardFooter className="text-center"></CardFooter>
                 </Card>
               </Col>
             </Row>
@@ -524,20 +638,23 @@ export default function LandingPage() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">AI and Machine Learning</h4>
+                        <h4 className="text-uppercase">
+                          AI and Machine Learning
+                        </h4>
                         <hr className="line-primary" />
                       </Col>
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem>Natural Language Processing (NLP)</ListGroupItem>
+                        <ListGroupItem>
+                          Natural Language Processing (NLP)
+                        </ListGroupItem>
                         <ListGroupItem>Computer Vision</ListGroupItem>
                         <ListGroupItem>Predictive Analytics</ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
-                  </CardFooter>
+                  <CardFooter className="text-center"></CardFooter>
                 </Card>
               </Col>
               <Col md="4">
@@ -552,7 +669,9 @@ export default function LandingPage() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Cybersecurity Services</h4>
+                        <h4 className="text-uppercase">
+                          Cybersecurity Services
+                        </h4>
                         <hr className="line-success" />
                       </Col>
                     </Row>
@@ -564,8 +683,7 @@ export default function LandingPage() {
                       </ListGroup>
                     </Row>
                   </CardBody>
-                  <CardFooter className="text-center">                    
-                  </CardFooter>
+                  <CardFooter className="text-center"></CardFooter>
                 </Card>
               </Col>
               <Col md="4">
@@ -592,8 +710,7 @@ export default function LandingPage() {
                       </ListGroup>
                     </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
-                  </CardFooter>
+                  <CardFooter className="text-center"></CardFooter>
                 </Card>
               </Col>
             </Row>

@@ -1,22 +1,13 @@
 import React from "react";
-import PerfectScrollbar from "perfect-scrollbar";
 
 import {
   Button,
   Card,
   CardHeader,
   CardBody,
-  Label,
   FormGroup,
   Form,
   Input,
-  FormText,
-  NavItem,
-  NavLink,
-  Nav,
-  Table,
-  TabContent,
-  TabPane,
   Container,
   Row,
   Col,
@@ -27,9 +18,8 @@ import {
 // core components
 
 import axios from "axios";
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import classNames from "classnames";
 import Footer from "components/Footer/Footer.js";
+import IndexNavbar from "components/Navbars/IndexNavbar";
 
 const carouselItems = [
   {
@@ -51,8 +41,7 @@ const carouselItems = [
 
 // let ps = null;
 
-export default function ProfilePage({scrollToDivComponent}) {
-  const [tabs, setTabs] = React.useState(1);
+export default function ProfilePage({ scrollToDivComponent }) {
   const [queryUserFullName, setQueryUserFullName] = React.useState("");
   const [queryUserEmail, setQueryUserEmail] = React.useState("");
   const [queryUserPhoneNumber, setQueryUserPhoneNumber] = React.useState("");
@@ -90,9 +79,13 @@ export default function ProfilePage({scrollToDivComponent}) {
   };
   React.useEffect(() => {
     if (scrollToDivComponent === "reviews") {
-      document.querySelector(".reviews-section").scrollIntoView({ behavior: "smooth" });
+      document
+        .querySelector(".reviews-section")
+        .scrollIntoView({ behavior: "smooth" });
     } else {
-      document.querySelector(".contact-section").scrollIntoView({ behavior: "smooth" });
+      document
+        .querySelector(".contact-section")
+        .scrollIntoView({ behavior: "smooth" });
     }
   }, [scrollToDivComponent]);
   //  React.useEffect(() => {
@@ -138,50 +131,15 @@ export default function ProfilePage({scrollToDivComponent}) {
   // }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar />
       <div className="wrapper">
-        <div className="page-header">
-          <img
-            alt="..."
-            className="dots"
-            src={require("assets/img/dots.png")}
-          />
-          <img
-            alt="..."
-            className="path"
-            src={require("assets/img/path4.png")}
-          />
-          {/* <Container className="align-items-center"> */}
-          <Container>
-            <Row className="justify-content-between">
-              <Col md="5">
-                <h1 className="profile-title text-left">
-                  Software Engineering
-                </h1>
-                <h5 className="text-on-back">02</h5>
-                <p className="profile-description text-left">
-                  An artist of considerable range, Ryan — the name taken by
-                  Melbourne-raised, Brooklyn-based Nick Murphy — writes,
-                  performs and records all of his own music, giving it a warm,
-                  intimate feel with a solid groove structure. An artist of
-                  considerable range.
-                </p>
-              </Col>
-              <Col md="6">
-                <Row className="justify-content-between align-items-center">
-                  <UncontrolledCarousel
-                    items={[
-                      {
-                        src: require("assets/img/web-development-isometric-concept-composition-illustration_1284-55922 (1).avif"),
-                      },
-                    ]}
-                  />
-                </Row>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="section">
+        
+
+        <div className="section reviews-section">
+          <br />
+          <br />
+          <br />
+          <br />
           <Container>
             <Row className="justify-content-between">
               <Col md="6">
@@ -190,8 +148,8 @@ export default function ProfilePage({scrollToDivComponent}) {
                 </Row>
               </Col>
               <Col md="5">
-                <h1 className=" profile-title text-left reviews-section">Projects</h1>
-                <h5 className="text-on-back">02</h5>
+                <h1 className=" profile-title text-left">Testimonials</h1>
+                <h5 className="text-on-back">01</h5>
                 <p className="profile-description text-left">
                   An artist of considerable range, Ryan — the name taken by
                   Melbourne-raised, Brooklyn-based Nick Murphy — writes,
@@ -221,14 +179,15 @@ export default function ProfilePage({scrollToDivComponent}) {
             </Row>
           </Container>
         </div>
-        <section className="section">
+        <div className="section contact-section">
+          <br />
           <Container>
             <Row>
               <Col md="6">
-                <Card className="card-plain contact-section">
+                <Card className="card-plain">
                   <CardHeader>
                     <h1 className="profile-title text-left">Contact</h1>
-                    <h5 className="text-on-back">03</h5>
+                    <h5 className="text-on-back">02</h5>
                   </CardHeader>
                   <CardBody>
                     <Form>
@@ -334,9 +293,9 @@ export default function ProfilePage({scrollToDivComponent}) {
                   <div className="description">
                     <h4 className="info-title">Find us at the office</h4>
                     <p>
-                      Bld Mihail Kogalniceanu, nr. 8, <br />
-                      7652 Bucharest, <br />
-                      Romania
+                      DLF Phase-3, Gurugram, India <br />
+                      Bellandur, Bangalore, India <br />
+                      South Lotts Road, Dublin, Ireland <br />
                     </p>
                   </div>
                 </div>
@@ -347,16 +306,21 @@ export default function ProfilePage({scrollToDivComponent}) {
                   <div className="description">
                     <h4 className="info-title">Give us a ring</h4>
                     <p>
-                      Michael Jordan <br />
-                      +40 762 321 762 <br />
-                      Mon - Fri, 8:00-22:00
+                      Devmine: +1 5802 1914 15
+                      <br />
+                      Avinash Jindal: +91 9050 9959 86
+                      <br />
+                      Arnav Agarwal: +91 7015 7438 55
+                      <br />
+                      Anirudh Sharma: +35 3852 1906 53
+                      <br />
                     </p>
                   </div>
                 </div>
               </Col>
             </Row>
           </Container>
-        </section>
+        </div>
         <Footer />
       </div>
     </>
