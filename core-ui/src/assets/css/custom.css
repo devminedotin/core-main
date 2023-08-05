@@ -1,14 +1,14 @@
 .custom-carousel .carousel-caption {
-  background-color: black; /* Set the background color to black */
-  opacity: 0.9; /* Optional: To make the caption semi-transparent */
-  color: white; /* Optional: To set the text color to white */
+  color: white;
   border-radius: 5px;
   align-items: center;
+  font-weight: 400;
+  font-size: 1.0625rem;
 }
 
 .carousel-item > img {
   object-fit: scale-down;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .d-none {
@@ -17,7 +17,7 @@
 
 @media (max-width: 768px) {
   .carousel-item {
-    flex: 0 0 100%; /* Show one item at a time on smaller screens */
-    max-width: 100%; /* Show one item at a time on smaller screens */
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
