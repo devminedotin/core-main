@@ -95,15 +95,18 @@ export default function ProfilePage({ scrollToDivComponent }) {
   const sendUserQuery = async () => {
     console.log("sendUserQuery Handler initialted.");
     await axios
-      .post("http://localhost:3001/contact-us", {
-        obj: {
-          name: queryUserFullName,
-          email: queryUserEmail,
-          company: queryUserCompany,
-          contact: queryUserPhoneNumber,
-          query: queryUserMessage,
-        },
-      })
+      .post(
+        "http://ec2-54-196-215-231.compute-1.amazonaws.com:3001/contact-us",
+        {
+          obj: {
+            name: queryUserFullName,
+            email: queryUserEmail,
+            company: queryUserCompany,
+            contact: queryUserPhoneNumber,
+            query: queryUserMessage,
+          },
+        }
+      )
       .then((response) => {
         console.log(response);
         if (response.status == 200) {

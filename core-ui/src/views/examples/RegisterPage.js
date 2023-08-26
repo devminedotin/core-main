@@ -89,19 +89,22 @@ export default function RegisterPage() {
   const JoinUsHandler = async () => {
     console.log("JOinUs Handler initialted.", varTemp);
     await axios
-      .post("http://localhost:3001/join-community", {
-        obj: {
-          name: fullNameValue,
-          state: userState,
-          city: userResidingCity,
-          yearsOfExperience: userYearsOfExperience,
-          techStack: userTechStack,
-          contact: userContact,
-          currentCompany: userCurrentCompany,
-          resumeLink: userResumeLink,
-          emailId: userEmailIdValue,
-        },
-      })
+      .post(
+        "http://ec2-54-196-215-231.compute-1.amazonaws.com:3001/join-community",
+        {
+          obj: {
+            name: fullNameValue,
+            state: userState,
+            city: userResidingCity,
+            yearsOfExperience: userYearsOfExperience,
+            techStack: userTechStack,
+            contact: userContact,
+            currentCompany: userCurrentCompany,
+            resumeLink: userResumeLink,
+            emailId: userEmailIdValue,
+          },
+        }
+      )
       .then((response) => {
         console.log(response);
       });
